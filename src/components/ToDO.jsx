@@ -20,10 +20,10 @@ export default function ToDO() {
 
   return (
     <div className='container text-center mt-5 pt-5' >
-      <h1>Todo list</h1>
+      <h1 className='text-light'>Todo list</h1>
 
       <div className="row my-5 mx-auto" style={{ width: '400px' }}>
-        <input type="text" value={toDoList} onChange={OnChange} className='col-lg-6' placeholder='Enter Your Task' style={{ width: '290px' }} />
+        <input type="text" value={toDoList} onChange={OnChange} className='col-lg-6' placeholder='Enter your task' style={{ width: '290px' }} />
         <button type="button" className="btn btn-primary col-lg-6 ms-2" style={{ width: '100px' }}
           onClick={myFuncText}>ADD
         </button>
@@ -34,7 +34,7 @@ export default function ToDO() {
 
 
           {list.length > 0 ? (
-            <ul  className='text-dark mt-5'>
+            <ul  className='mt-5'>
               {list.map((item) => {
                 return <li><strong>{item}</strong></li>;
               })}
