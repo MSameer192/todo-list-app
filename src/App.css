@@ -2,6 +2,11 @@
     pointer-events: all !important;
   } */
 
+
+  body {
+    background-color: gray;
+  }
+
   .myBox {
     border: 1px solid green;
     height: 40px;
@@ -19,6 +24,13 @@
     height: 50px;
     width: 350px;
     margin-left: 20PX;
+    border: 1px blue;
+    background-color: rgb(31, 33, 34);
+    color: white;
+  }
+
+  ::placeholder {
+    color: white;
   }
 
   .my-button {

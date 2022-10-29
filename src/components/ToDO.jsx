@@ -22,7 +22,7 @@ export default function ToDO() {
     if (editCheck) {
       list[editValue] = toDoList
       setList(list)
-
+      setEditCheck(false)
     } else {
       if (toDoList) {
         setList([...list, toDoList])
