@@ -1,6 +1,6 @@
-input:valid + button {
+/* input:valid + button {
     pointer-events: all !important;
-  }
+  } */
 
   .myBox {
     border: 1px solid green;
@@ -23,5 +23,5 @@ input:valid + button {
 
   .my-button {
     width: 100px;    
-    pointer-events: none;
+    /* pointer-events: none; */
   }
