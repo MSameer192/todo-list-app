@@ -4,13 +4,10 @@ export default function ToDO() {
 
   const [toDoList, setToDoList] = useState('');
   const [list, setList] = useState([]);
-  const [require, setRequire] = useState(false);
-
 
   const OnChange = (e) => {
     setToDoList(e.target.value);
-    
-    
+      
   };
 
   const onSubmit = (e) => {
@@ -58,8 +55,10 @@ export default function ToDO() {
        
         <div className="d-flex my-row">
           
-          {<input type="text" value={toDoList} minLength={1} onChange={OnChange} className='py-2 ps-3 my-input' placeholder='Enter your task' />}
-
+          
+            
+          {<input type="text" value={toDoList} minLength={1} required onChange={OnChange} className='py-2 ps-3 my-input' placeholder='Enter your task' />}
+          {list === '' ? alert("ALERT! PLEASE ADD YOUR TASK"): ''}
           <button type="submit" className="btn btn-primary my-button ms-2" 
             onClick={myFuncText}>ADD
           </button>
