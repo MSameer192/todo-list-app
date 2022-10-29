@@ -99,7 +99,7 @@ export default function ToDO() {
 
             {list.length > 0 ? (
               <div>
-                <button type='button' className='btn btn-primary mt-5' style={{ width: '100px' }} onClick={deleteAll}>DELETE ALL LIST</button>
+                <button type='button' className='btn btn-primary mt-5' style={{ width: '150px' }} onClick={deleteAll}>DELETE ALL LIST</button>
               </div>
             ) : (null)}
       </form>

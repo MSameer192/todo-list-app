@@ -7,8 +7,10 @@ input:valid + button {
   .myBox {
     border: 1px solid green;
     height: 40px;
-    margin: 10px 0px;
-  }
+    margin: 10px auto;
+    width: 450px;
+
+}
 
   .my-row {
     width: 500px;
