@@ -1,3 +1,25 @@
 input:valid + button {
     pointer-events: all !important;
-}
+  }
+
+
+
+  .myBox {
+    border: 1px solid green;
+    height: 40px;
+    margin: 10px 0px;
+  }
+
+  .my-row {
+    width: 500px;
+    margin: auto;
+  }
+
+  .my-input {
+    height: 50px;
+    width: 350px;
+  }
+
+  .my-button {
+    width: 100px;    
+  }
