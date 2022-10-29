@@ -4,10 +4,12 @@ export default function ToDO() {
 
   const [toDoList, setToDoList] = useState('');
   const [list, setList] = useState([]);
+  const [require, setRequire] = useState(false);
+
 
   const OnChange = (e) => {
     setToDoList(e.target.value);
-  
+    
     
   };
 
@@ -56,7 +58,7 @@ export default function ToDO() {
        
         <div className="d-flex my-row">
           
-          <input type="text" value={toDoList} minLength={1} onChange={OnChange} className='py-2 ps-3 my-input' placeholder='Enter your task' />
+          {<input type="text" value={toDoList} minLength={1} onChange={OnChange} className='py-2 ps-3 my-input' placeholder='Enter your task' />}
 
           <button type="submit" className="btn btn-primary my-button ms-2" 
             onClick={myFuncText}>ADD
@@ -84,7 +86,6 @@ export default function ToDO() {
                         <strong>{item}</strong>
                     </div>
                     <button type='button' className='btn btn-primary' style={{ width: '100px' }} onClick={deleteList}>DELETE</button>
-                    {/* <button type='button' className='btn btn-primary' style={{ width: '100px' }} onClick={editList}>RE-WRITE</button> */}
                   </div>
                 )
               })}
