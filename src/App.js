@@ -1,10 +1,11 @@
 import './App.css';
-import ToDO from './components/ToDO';
+import ToDOMaster from './components/ToDOMaster';
+// import ToDO from './components/ToDO';
 
 function App() {
   return (
     <>
-      <ToDO />
+      <ToDOMaster />
     </>
   );
 }
