@@ -97,8 +97,8 @@ i:hover {
   background-color: rgba(255, 255, 255, 0.103);
 }
 
-@media only screen and (max-width: 400px) {
+/* @media only screen and (max-width: 400px) {
   .box {
     width: 360px;  
 }
-}
+} */

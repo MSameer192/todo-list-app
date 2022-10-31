@@ -98,7 +98,7 @@ export default function ToDOMaster() {
                     <div className="">
 
                       <ul type="none" className='myBox  box d-flex mt-2 justify-content-between px-3 align-items-center'>
-                        <li key={index} className='input text-wrap'>   {item}  </li>
+                        <li key={index} className='input'>   {item}  </li>
 
                       <div className="right ms-2">
                         <i type='button' data-bs-toggle="modal" data-bs-target="#exampleModal3" className='fa-solid fa-trash fa-lg my-2	'></i>
@@ -106,18 +106,11 @@ export default function ToDOMaster() {
                       </div>
                       </ul>
                       
-                      
-
-                      
-
                       <Modal3 mydelete={() => { deleteList(index) } }/> 
-
 
                       {/* <button type='button' data-bs-toggle='modal' data-bs-target='#exampleModal2' className='btn btn-primary' style={{ width: '100px' }} onClick={() => { editFunc(index) } }>EDIT</button> */}
 
-                    </div>
-
-                    
+                    </div>                   
                     </>
                   )
                 }
