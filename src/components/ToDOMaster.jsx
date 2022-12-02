@@ -13,16 +13,6 @@ export default function ToDOMaster() {
   const [editCheck, setEditCheck] = useState(false);
   const [editValue, setEditValue] = useState("");
 
-
-
-
-  // useEffect(() => {
-  //   axios.get(`${baseURL}/1`).then((response) => {
-  //     setPost(response.data);
-  //   });
-  // }, []);
-
-
   const addFunc = () => {
 
     
@@ -42,9 +32,7 @@ export default function ToDOMaster() {
     });
 
 
-  
 
-    
     if (editCheck) {
       list[editValue] = toDoList
       setList(list)
@@ -60,18 +48,11 @@ export default function ToDOMaster() {
   }
     
 
-  
-
-
-
-
   function editFunc(index) {
     setToDoList(list[index])
     setEditValue([index])
     setEditCheck(true)
   }
-
-
 
   const deleteAll = () => {
     setList('')
@@ -82,7 +63,6 @@ export default function ToDOMaster() {
     newList.splice(index, 1)
     setList(newList)
   }
-
 
   const OnChange = (e) => {
     setToDoList(e.target.value);
@@ -106,7 +86,7 @@ export default function ToDOMaster() {
 
           <div className="d-flex justify-content-center my-row">
 
-            <input type="text" value={toDoList} onChange={OnChange} className='py-2 ps-4 my-input mx-2' placeholder='Enter your task' />
+            <input name='task' type="text" value={toDoList} onChange={OnChange} className='py-2 ps-4 my-input mx-2' placeholder='Enter your task' />
 
             <button type="submit" className="my-button"
               onClick={addFunc}>Add
