@@ -23,7 +23,7 @@ export default function ToDOMaster() {
       };
 
 
-    axios.post(apiURL, toDoList, {headers})
+    axios.post(apiURL, list, {headers})
     .then((response) => {
       console.log(response)
     })    
@@ -64,9 +64,11 @@ export default function ToDOMaster() {
     setList(newList)
   }
 
-  const OnChange = (e) => {
-    setToDoList(e.target.value);
+  var name = value;
 
+  const OnChange = (e) => {
+
+    setToDoList(name : value);
   };
 
   const onSubmit = (e) => {
@@ -107,8 +109,6 @@ export default function ToDOMaster() {
                     const deleteList = () => {
                       onDelete(index)
                     };
-
-
 
                     return (
                       <>
