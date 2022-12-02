@@ -64,11 +64,10 @@ export default function ToDOMaster() {
     setList(newList)
   }
 
-  var name = value;
-
+  
   const OnChange = (e) => {
-
-    setToDoList(name : value);
+    var name = e.target.value;
+    setToDoList(name)
   };
 
   const onSubmit = (e) => {
