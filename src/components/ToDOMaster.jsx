@@ -23,7 +23,7 @@ export default function ToDOMaster() {
       };
 
 
-    axios.post(apiURL, list, {headers})
+    axios.post(apiURL, toDoList, {headers})
     .then((response) => {
       console.log(response)
     })    
