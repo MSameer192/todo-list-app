@@ -3,13 +3,13 @@ import Modal from './Modal';
 import Modal3 from './Modal3';
 import axios from "axios";
 
-// import Modal3 from './Modal3';
-// import Modal2 from './Modal2';
-
 export default function ToDOMaster() {
 
   const [toDoList, setToDoList] = useState('');
   const [list, setList] = useState([]);
+
+
+
   const [editCheck, setEditCheck] = useState(false);
   const [editValue, setEditValue] = useState("");
 
@@ -18,9 +18,13 @@ export default function ToDOMaster() {
     
     const apiURL = 'https://todo-backend-msameer192.vercel.app/api/todo'
 
+      // const headers = {
+      //     'Content-Type': 'application/json',
+      // };
+
       const headers = {
-          'Content-Type': 'application/json',
-      };
+        "Content-type": "multipart/form-date"
+      }
 
 
     axios.post(apiURL, toDoList, {headers})
@@ -83,7 +87,7 @@ export default function ToDOMaster() {
       <div className='container text-center mt-5 pt-5' >
         <p className='heading'>Todo list</p>
 
-        <form className="my-5 form" onSubmit={onSubmit}  >
+        <form className="my-5 form" onSubmit={onSubmit} methot="POST" >
 
           <div className="d-flex justify-content-center my-row">
 
