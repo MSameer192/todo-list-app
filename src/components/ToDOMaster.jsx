@@ -1,9 +1,31 @@
 import React, { useState, /* useEffect */ } from 'react';
 import Modal from './Modal';
 import Modal3 from './Modal3';
-import axios from "axios";
+// import axios from "axios";
+import store from '../redux/store';
+import * as actions from './actionTypes'
+import { bugAdded } from './actions';
 
 export default function ToDOMaster() {
+
+
+  const unsubscribe = store.subscribe(()=>{
+    console.log('Store Changed!', store.getState());
+  })
+
+  store.dispatch(bugAdded('Bug 1'))
+
+  unsubscribe();
+
+  store.dispatch({
+    type: actions.BUG_REMOVE,
+    payload: {
+      id : 1
+    }
+  })
+
+  console.log(store.getState());
+
 
   const [toDoList, setToDoList] = useState('');
   const [list, setList] = useState([]);
@@ -15,25 +37,25 @@ export default function ToDOMaster() {
 
   const addFunc = () => {
 
-    
-    const apiURL = 'https://todo-backend-msameer192.vercel.app/api/todo'
 
-      // const headers = {
-      //     'Content-Type': 'application/json',
-      // };
+    // const apiURL = 'https://todo-backend-msameer192.vercel.app/api/todo'
 
-      const headers = {
-        "Content-type": "multipart/form-date"
-      }
+    // const headers = {
+    //   'Content-Type': 'application/json',
+    // };
 
 
-    axios.post(apiURL, toDoList, {headers})
-    .then((response) => {
-      console.log(response)
-    })    
-    .catch(function (error) {
-      console.log(error);
-    });
+
+    // axios.post(apiURL, {
+    //   task: toDoList
+    // }, { headers })
+    //   .then((response) => {
+    //     console.log(response);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+
 
 
 
@@ -50,7 +72,7 @@ export default function ToDOMaster() {
     setToDoList("");
 
   }
-    
+
 
   function editFunc(index) {
     setToDoList(list[index])
@@ -68,7 +90,7 @@ export default function ToDOMaster() {
     setList(newList)
   }
 
-  
+
   const OnChange = (e) => {
     var name = e.target.value;
     setToDoList(name)
@@ -115,9 +137,9 @@ export default function ToDOMaster() {
 
                     return (
                       <>
-                        <div className="" key={item}>
+                        <div className="" >
 
-                          <ul key={index} type="none" className='myBox  box d-flex mt-2 justify-content-between px-3 align-items-center'>
+                          <ul type="none" className='myBox  box d-flex mt-2 justify-content-between px-3 align-items-center'>
                             <li className='input' key={index}>   {item}  </li>
 
                             <div className="right ms-2">
